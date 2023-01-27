@@ -1,0 +1,19 @@
+<h1 class="display-3 text-center" style="margin-bottom: 10px">Ver todas las noticias</h1>
+
+<div class="mx-auto" style="width: 80%">
+    <% @posts.each do |post| %>
+        <%= link_to post_path(post), class:"text-decoration-none" do%>
+            <div class="card" style="margin-bottom: 20px">
+                <% if post.image.present? %>
+                    <img src="<%= post.image %>" class="card-img-top mx-auto my-4" style="max-width: 500px; max-height: 500px; object-fit: contain;">
+                <% else %>
+                    <img src="https://as2.ftcdn.net/v2/jpg/03/06/24/69/1000_F_306246971_LxEI49W9aeAwgFpe6kqxQjiBjhEKDxcO.jpg" class="card-img-top mx-auto my-4" style="max-width: 500px; max-height: 500px; object-fit: contain;" alt="<%= post.title %>">
+                <% end %> 
+                <div class="col-md-12 mb-1 text-center" >
+                    <span class="badge bg-danger px-2 py-1 shadow-1-strong mb-3">Noticias del día</span>
+                    <h4><strong class="display-3 text-dark" ><%= post.title.capitalize %></strong></h4>
+                </div>
+            </div>
+        <% end %>
+    <% end %>
+</div>

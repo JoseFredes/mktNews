@@ -1,0 +1,15 @@
+
+<% if @post.present? %>
+    <div class="card my-5">
+        <img class="img-fluid object-fit-fill" src="<%= @post.image %>" alt="Article Image" style=" max-height: 600px; min-height: 150px; padding: 10px;background-color: #363532; object-fit: contain;">
+        <div style="margin-left:10px;margin-right: 10px; margin-top: 10px ">
+            <h1 class="text-center my-2 display-3"><%= @post.title.capitalize %></h1>
+            <hr class="hr" />
+            <p class="bg-secondary-subtle"><%= @post.body %></p>
+            <p class="text-muted"><%= @post.created_at.strftime("%F") %> Escrito por: <%= @post.author.capitalize %></p>
+            <hr class="hr" />
+            <p class="text-justify"><%= @post.text %></p>
+        </div>
+    </div>
+
+<% end %>
