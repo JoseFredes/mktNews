@@ -1,6 +1,8 @@
 require "test_helper"
 
 class PostsControllerTest < ActionDispatch::IntegrationTest
+  # # I decided to test the GET and POST functionality for this controller because the application needs these endpoints in order to function and fulfill its base purpose
+
   test "should get new" do
     get posts_new_path
     assert_response :success
