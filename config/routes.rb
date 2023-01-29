@@ -4,4 +4,5 @@ Rails.application.routes.draw do
   root 'posts#index'
   
   post '/posts/new', to: 'posts#create'
+  get '*unmatched_route', to: 'exception#catch_404'
 end

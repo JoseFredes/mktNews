@@ -30,6 +30,14 @@ Rails.application.configure do
     config.cache_store = :null_store
   end
 
+  # config.after_initialize do
+  #   Slack.configure do |config|
+  #     config.token = "YOUR_SLACK_TOKEN"
+  #   end
+  #   notifier = Slack::Notifier.new("YOUR_SLACK_CHANNEL", username: "YOUR_BOT_NAME")
+  #   notifier.ping("Atención, se ha producido un error en la aplicación. Por favor, revise el registro de errores.")
+  # end
+  
   # Store uploaded files on the local file system (see config/storage.yml for options).
   config.active_storage.service = :local
 

@@ -1,4 +1,6 @@
 class PostsController < ApplicationController
+    require 'timecop'
+
     def index
 		@posts = Posts.all.order("created_at DESC")
 	end
@@ -10,8 +12,11 @@ class PostsController < ApplicationController
     def create
         @posts = Posts.new(post_params)
         if @posts.save
-            redirect_to posts_path, notice: "Post created successfully."
+            redirect_to posts_path
         else
+            flash.now[:danger] = "Error al crear el post, por favor verifica los datos."
+            Timecop.travel(3.seconds.from_now)
+            flash.keep(:danger)
             render 'new'
         end
     end

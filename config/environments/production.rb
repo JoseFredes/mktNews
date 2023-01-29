@@ -97,6 +97,14 @@ Rails.application.configure do
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
 
+  # config.after_initialize do
+  #   Slack.configure do |config|
+  #     config.token = "YOUR_SLACK_TOKEN"
+  #   end
+  #   notifier = Slack::Notifier.new("YOUR_SLACK_CHANNEL", username: "YOUR_BOT_NAME")
+  #   notifier.ping("Atención, se ha producido un error en la aplicación. Por favor, revise el registro de errores.")
+  # end
+  
   # Inserts middleware to perform automatic connection switching.
   # The `database_selector` hash is used to pass options to the DatabaseSelector
   # middleware. The `delay` is used to determine how long to wait after a write
