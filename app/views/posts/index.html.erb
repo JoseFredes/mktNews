@@ -1,5 +1,16 @@
 <h1 class="display-3 text-center" style="margin-bottom: 10px">Ver todas las noticias</h1>
 
+<% if !@posts.present?  %>
+    <div class="container text-center" style="margin-top: 20px">
+        <div class="card mx-auto" style="max-width: 500px;">
+            <h5 class="card-header ">Aún no hay noticias</h5>
+            <div class="card-body">
+                <p class="card-text ">Puedes agregar una nueva noticia en la sección "Nueva Publicación"</p>
+                <a href="/posts/new" class="btn btn-primary">Nueva Publicación</a>
+            </div>
+        </div>
+    </div>
+<% end %>
 <div class="mx-auto" style="width: 80%">
     <% @posts.each do |post| %>
         <%= link_to post_path(post), class:"text-decoration-none" do%>
@@ -17,3 +28,5 @@
         <% end %>
     <% end %>
 </div>
+
+

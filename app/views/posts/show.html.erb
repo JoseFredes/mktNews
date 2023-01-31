@@ -1,8 +1,8 @@
 
 <% if @post.present? %>
-    <div class="card my-5">
-        <img class="img-fluid object-fit-fill" src="<%= @post.image %>" alt="Article Image" style=" max-height: 600px; min-height: 150px; padding: 10px;background-color: #363532; object-fit: contain;">
-        <div style="margin-left:10px;margin-right: 10px; margin-top: 10px ">
+    <div class="card my-5 border-0">
+        <img class="img-fluid object-fit-fill" src="<%= @post.image %>" alt="Article Image" style=" max-height: 600px; min-height: 150px; padding: 10px ;background-color: #363532; object-fit: contain; margin-left:25%;margin-right: 25%; ">
+        <div style="margin-left:25%;margin-right: 25%; margin-top: 10px ">
             <h1 class="text-center my-2 display-3"><%= @post.title.capitalize %></h1>
             <hr class="hr" />
             <p class="bg-secondary-subtle"><%= @post.body %></p>
@@ -10,6 +10,9 @@
             <hr class="hr" />
             <p class="text-justify"><%= @post.text %></p>
         </div>
+        <%= form_for @post, method: :delete do |f| %>
+        <%= f.submit "Eliminar post", class: "btn btn-danger" %>
+        <% end %>
     </div>
 
 <% end %>

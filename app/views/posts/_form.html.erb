@@ -1,8 +1,11 @@
-<div class="d-flex justify-content-center bg-light p-3" >
-  <%= form_with url: posts_new_path, model: @posts, local: true do |form| %>
+<div class="d-flex justify-content-center bg-light p-3", style="max-width: 1000px; margin: 0 auto;" >
+  <%= form_with url: posts_new_path, model: @posts, local: true do |form|%>
     <div class="form-group">
       <%= form.label :Título %>
       <%= form.text_field :title, class: "form-control form-control-lg" %>
+      <% if @posts.errors.messages[:title].present? && @posts.errors.messages[:title].include?("is too short (minimum is 5 characters)") %>
+        <p style="color: red;">El título debe tener al menos 5 caracteres</p>
+      <% end %>
     </div>
 
     <div class="form-group">
@@ -29,5 +32,5 @@
     <div class="text-center" style="margin-top:10px">
         <%= form.submit "Guardar post", class: "btn btn-success mx-auto" %>
     </div>
-    <% end %>
+  <% end %>
 </div>
