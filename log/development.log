@@ -21195,3 +21195,404 @@ Processing by PostsController#index as HTML
 Completed 200 OK in 8ms (Views: 6.0ms | ActiveRecord: 1.1ms | Allocations: 5390)
 
 
+Started GET "/" for 127.0.0.1 at 2023-01-31 10:12:29 -0300
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPosts Load (3.6ms)[0m  [1m[34mSELECT "posts".* FROM "posts" ORDER BY created_at DESC[0m
+  ↳ app/views/posts/index.html.erb:3
+  Rendered posts/index.html.erb within layouts/application (Duration: 14.5ms | Allocations: 6522)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.6ms | Allocations: 123)
+  Rendered layout layouts/application.html.erb (Duration: 27.7ms | Allocations: 13731)
+Completed 200 OK in 35ms (Views: 19.5ms | ActiveRecord: 9.8ms | Allocations: 18032)
+
+
+Started GET "/ffffsdsd" for 127.0.0.1 at 2023-01-31 10:12:29 -0300
+Processing by ExceptionController#catch_404 as HTML
+  Parameters: {"unmatched_route"=>"ffffsdsd"}
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms | Allocations: 325)
+
+
+Started GET "/" for 127.0.0.1 at 2023-01-31 10:12:29 -0300
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPosts Load (1.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts" ORDER BY created_at DESC[0m
+  ↳ app/views/posts/index.html.erb:3
+  Rendered posts/index.html.erb within layouts/application (Duration: 2.0ms | Allocations: 872)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.1ms | Allocations: 40)
+  Rendered layout layouts/application.html.erb (Duration: 6.9ms | Allocations: 4789)
+Completed 200 OK in 8ms (Views: 5.9ms | ActiveRecord: 1.2ms | Allocations: 5393)
+
+
+Started GET "/posts/18" for 127.0.0.1 at 2023-01-31 10:12:34 -0300
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"18"}
+  [1m[36mPosts Load (0.8ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:25:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (Duration: 1.6ms | Allocations: 935)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.0ms | Allocations: 40)
+  Rendered layout layouts/application.html.erb (Duration: 5.6ms | Allocations: 4843)
+Completed 200 OK in 18ms (Views: 6.6ms | ActiveRecord: 1.6ms | Allocations: 7058)
+
+
+Started GET "/posts/ffffsdsd" for 127.0.0.1 at 2023-01-31 10:12:34 -0300
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"ffffsdsd"}
+  [1m[36mPosts Load (0.6ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:25:in `show'
+Completed 404 Not Found in 2ms (ActiveRecord: 0.6ms | Allocations: 1590)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Posts with 'id'=ffffsdsd):
+  
+app/controllers/posts_controller.rb:25:in `show'
+Started DELETE "/posts/18" for 127.0.0.1 at 2023-01-31 10:12:35 -0300
+Processing by PostsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "commit"=>"Eliminar post", "id"=>"18"}
+  [1m[36mPosts Load (33.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:29:in `destroy'
+  [1m[36mTRANSACTION (6.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/posts_controller.rb:30:in `destroy'
+  [1m[36mPosts Destroy (4.2ms)[0m  [1m[31mDELETE FROM "posts" WHERE "posts"."id" = $1[0m  [["id", 18]]
+  ↳ app/controllers/posts_controller.rb:30:in `destroy'
+  [1m[36mTRANSACTION (3.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/posts_controller.rb:30:in `destroy'
+Redirected to http://127.0.0.1:3000/posts
+Completed 302 Found in 109ms (ActiveRecord: 46.6ms | Allocations: 2997)
+
+
+Started GET "/posts" for 127.0.0.1 at 2023-01-31 10:12:35 -0300
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPosts Load (2.0ms)[0m  [1m[34mSELECT "posts".* FROM "posts" ORDER BY created_at DESC[0m
+  ↳ app/views/posts/index.html.erb:3
+  Rendered posts/index.html.erb within layouts/application (Duration: 4.2ms | Allocations: 802)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.4ms | Allocations: 40)
+  Rendered layout layouts/application.html.erb (Duration: 14.5ms | Allocations: 4726)
+Completed 200 OK in 19ms (Views: 13.1ms | ActiveRecord: 2.0ms | Allocations: 5330)
+
+
+Started GET "/ffffsdsd" for 127.0.0.1 at 2023-01-31 10:12:35 -0300
+Processing by ExceptionController#catch_404 as HTML
+  Parameters: {"unmatched_route"=>"ffffsdsd"}
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms | Allocations: 273)
+
+
+Started GET "/" for 127.0.0.1 at 2023-01-31 10:12:35 -0300
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPosts Load (0.7ms)[0m  [1m[34mSELECT "posts".* FROM "posts" ORDER BY created_at DESC[0m
+  ↳ app/views/posts/index.html.erb:3
+  Rendered posts/index.html.erb within layouts/application (Duration: 1.5ms | Allocations: 802)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.1ms | Allocations: 40)
+  Rendered layout layouts/application.html.erb (Duration: 6.5ms | Allocations: 4719)
+Completed 200 OK in 8ms (Views: 6.2ms | ActiveRecord: 0.7ms | Allocations: 5321)
+
+
+Started GET "/posts/17" for 127.0.0.1 at 2023-01-31 10:12:36 -0300
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"17"}
+  [1m[36mPosts Load (5.6ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:25:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (Duration: 1.5ms | Allocations: 407)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.1ms | Allocations: 40)
+  Rendered layout layouts/application.html.erb (Duration: 9.7ms | Allocations: 4314)
+Completed 200 OK in 26ms (Views: 11.3ms | ActiveRecord: 5.6ms | Allocations: 6162)
+
+
+Started GET "/posts/ffffsdsd" for 127.0.0.1 at 2023-01-31 10:12:36 -0300
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"ffffsdsd"}
+  [1m[36mPosts Load (0.7ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:25:in `show'
+Completed 404 Not Found in 5ms (ActiveRecord: 0.7ms | Allocations: 4534)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Posts with 'id'=ffffsdsd):
+  
+app/controllers/posts_controller.rb:25:in `show'
+Started DELETE "/posts/17" for 127.0.0.1 at 2023-01-31 10:12:36 -0300
+Processing by PostsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "commit"=>"Eliminar post", "id"=>"17"}
+  [1m[36mPosts Load (2.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:29:in `destroy'
+  [1m[36mTRANSACTION (2.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/posts_controller.rb:30:in `destroy'
+  [1m[36mPosts Destroy (1.9ms)[0m  [1m[31mDELETE FROM "posts" WHERE "posts"."id" = $1[0m  [["id", 17]]
+  ↳ app/controllers/posts_controller.rb:30:in `destroy'
+  [1m[36mTRANSACTION (2.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/posts_controller.rb:30:in `destroy'
+Redirected to http://127.0.0.1:3000/posts
+Completed 302 Found in 20ms (ActiveRecord: 9.1ms | Allocations: 2786)
+
+
+Started GET "/posts" for 127.0.0.1 at 2023-01-31 10:12:36 -0300
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPosts Load (0.9ms)[0m  [1m[34mSELECT "posts".* FROM "posts" ORDER BY created_at DESC[0m
+  ↳ app/views/posts/index.html.erb:3
+  Rendered posts/index.html.erb within layouts/application (Duration: 1.8ms | Allocations: 714)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.1ms | Allocations: 40)
+  Rendered layout layouts/application.html.erb (Duration: 8.5ms | Allocations: 4640)
+Completed 200 OK in 10ms (Views: 8.0ms | ActiveRecord: 0.9ms | Allocations: 5244)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2023-01-31 10:12:38 -0300
+Processing by PostsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/new.html.erb within layouts/application
+  Rendered shared/_alert.html.erb (Duration: 8.4ms | Allocations: 255)
+  Rendered posts/_form.html.erb (Duration: 36.1ms | Allocations: 23807)
+  Rendered posts/new.html.erb within layouts/application (Duration: 51.2ms | Allocations: 24625)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.1ms | Allocations: 39)
+  Rendered layout layouts/application.html.erb (Duration: 56.5ms | Allocations: 28531)
+Completed 200 OK in 60ms (Views: 57.3ms | ActiveRecord: 0.0ms | Allocations: 29703)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2023-01-31 10:12:41 -0300
+Processing by PostsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/new.html.erb within layouts/application
+  Rendered shared/_alert.html.erb (Duration: 0.1ms | Allocations: 54)
+  Rendered posts/_form.html.erb (Duration: 6.0ms | Allocations: 1578)
+  Rendered posts/new.html.erb within layouts/application (Duration: 6.6ms | Allocations: 1788)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.1ms | Allocations: 39)
+  Rendered layout layouts/application.html.erb (Duration: 14.9ms | Allocations: 5701)
+Completed 200 OK in 18ms (Views: 17.2ms | ActiveRecord: 0.0ms | Allocations: 6175)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2023-01-31 10:12:43 -0300
+Processing by PostsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/new.html.erb within layouts/application
+  Rendered shared/_alert.html.erb (Duration: 0.2ms | Allocations: 53)
+  Rendered posts/_form.html.erb (Duration: 3.0ms | Allocations: 1578)
+  Rendered posts/new.html.erb within layouts/application (Duration: 4.4ms | Allocations: 1787)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.1ms | Allocations: 39)
+  Rendered layout layouts/application.html.erb (Duration: 13.0ms | Allocations: 5693)
+Completed 200 OK in 15ms (Views: 13.6ms | ActiveRecord: 0.0ms | Allocations: 6155)
+
+
+Started GET "/" for 127.0.0.1 at 2023-01-31 10:12:44 -0300
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPosts Load (4.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts" ORDER BY created_at DESC[0m
+  ↳ app/views/posts/index.html.erb:3
+  Rendered posts/index.html.erb within layouts/application (Duration: 7.3ms | Allocations: 853)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.1ms | Allocations: 40)
+  Rendered layout layouts/application.html.erb (Duration: 17.5ms | Allocations: 4773)
+Completed 200 OK in 22ms (Views: 13.8ms | ActiveRecord: 4.4ms | Allocations: 5883)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2023-01-31 10:12:44 -0300
+Processing by PostsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/new.html.erb within layouts/application
+  Rendered shared/_alert.html.erb (Duration: 0.3ms | Allocations: 53)
+  Rendered posts/_form.html.erb (Duration: 7.2ms | Allocations: 2069)
+  Rendered posts/new.html.erb within layouts/application (Duration: 8.9ms | Allocations: 2331)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.1ms | Allocations: 39)
+  Rendered layout layouts/application.html.erb (Duration: 15.3ms | Allocations: 6371)
+Completed 200 OK in 19ms (Views: 16.4ms | ActiveRecord: 0.0ms | Allocations: 6835)
+
+
+Started GET "/" for 127.0.0.1 at 2023-01-31 10:12:45 -0300
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPosts Load (1.7ms)[0m  [1m[34mSELECT "posts".* FROM "posts" ORDER BY created_at DESC[0m
+  ↳ app/views/posts/index.html.erb:3
+  Rendered posts/index.html.erb within layouts/application (Duration: 6.6ms | Allocations: 714)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.1ms | Allocations: 40)
+  Rendered layout layouts/application.html.erb (Duration: 13.9ms | Allocations: 4634)
+Completed 200 OK in 22ms (Views: 12.7ms | ActiveRecord: 1.7ms | Allocations: 5919)
+
+
+Started GET "/" for 127.0.0.1 at 2023-01-31 10:12:51 -0300
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPosts Load (1.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts" ORDER BY created_at DESC[0m
+  ↳ app/views/posts/index.html.erb:3
+  Rendered posts/index.html.erb within layouts/application (Duration: 2.4ms | Allocations: 1389)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.3ms | Allocations: 123)
+  Rendered layout layouts/application.html.erb (Duration: 8.4ms | Allocations: 8621)
+Completed 200 OK in 14ms (Views: 8.6ms | ActiveRecord: 1.4ms | Allocations: 12916)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2023-01-31 10:12:52 -0300
+Processing by PostsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/new.html.erb within layouts/application
+  Rendered shared/_alert.html.erb (Duration: 0.8ms | Allocations: 184)
+  Rendered posts/_form.html.erb (Duration: 34.0ms | Allocations: 24037)
+  Rendered posts/new.html.erb within layouts/application (Duration: 37.2ms | Allocations: 24738)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.0ms | Allocations: 39)
+  Rendered layout layouts/application.html.erb (Duration: 42.2ms | Allocations: 28645)
+Completed 200 OK in 61ms (Views: 42.7ms | ActiveRecord: 5.7ms | Allocations: 34180)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2023-01-31 10:12:53 -0300
+Processing by PostsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/new.html.erb within layouts/application
+  Rendered shared/_alert.html.erb (Duration: 0.2ms | Allocations: 53)
+  Rendered posts/_form.html.erb (Duration: 7.9ms | Allocations: 1578)
+  Rendered posts/new.html.erb within layouts/application (Duration: 8.8ms | Allocations: 1787)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.1ms | Allocations: 39)
+  Rendered layout layouts/application.html.erb (Duration: 14.6ms | Allocations: 5695)
+Completed 200 OK in 17ms (Views: 15.2ms | ActiveRecord: 0.0ms | Allocations: 6167)
+
+
+Started GET "/" for 127.0.0.1 at 2023-01-31 10:13:20 -0300
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPosts Load (2.0ms)[0m  [1m[34mSELECT "posts".* FROM "posts" ORDER BY created_at DESC[0m
+  ↳ app/views/posts/index.html.erb:3
+  Rendered posts/index.html.erb within layouts/application (Duration: 7.3ms | Allocations: 715)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.1ms | Allocations: 40)
+  Rendered layout layouts/application.html.erb (Duration: 17.6ms | Allocations: 4635)
+Completed 200 OK in 20ms (Views: 16.2ms | ActiveRecord: 2.0ms | Allocations: 5229)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2023-01-31 10:13:21 -0300
+Processing by PostsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/new.html.erb within layouts/application
+  Rendered shared/_alert.html.erb (Duration: 0.1ms | Allocations: 53)
+  Rendered posts/_form.html.erb (Duration: 6.2ms | Allocations: 2057)
+  Rendered posts/new.html.erb within layouts/application (Duration: 6.8ms | Allocations: 2288)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.1ms | Allocations: 39)
+  Rendered layout layouts/application.html.erb (Duration: 12.8ms | Allocations: 6336)
+Completed 200 OK in 14ms (Views: 13.4ms | ActiveRecord: 0.0ms | Allocations: 6841)
+
+
+Started POST "/posts/new" for 127.0.0.1 at 2023-01-31 10:14:04 -0300
+Processing by PostsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "posts"=>{"title"=>"Lorem", "body"=>"Aunque no posee actualmente fuentes para justificar sus hipótesis, el profesor de filología clásica Richard McClintock asegura que su uso se remonta a los impresores de comienzos del siglo XVI. Su uso en algunos editores de texto muy conocidos en la actualidad ha dado al texto lorem ipsum nueva popularidad.", "text"=>"Aunque no posee actualmente fuentes para justificar sus hipótesis, el profesor de filología clásica Richard McClintock asegura que su uso se remonta a los impresores de comienzos del siglo XVI. Su uso en algunos editores de texto muy conocidos en la actualidad ha dado al texto lorem ipsum nueva popularidad.vAunque no posee actualmente fuentes para justificar sus hipótesis, el profesor de filología clásica Richard McClintock asegura que su uso se remonta a los impresores de comienzos del siglo XVI. Su uso en algunos editores de texto muy conocidos en la actualidad ha dado al texto lorem ipsum nueva popularidad.Aunque no posee actualmente fuentes para justificar sus hipótesis, el profesor de filología clásica Richard McClintock asegura que su uso se remonta a los impresores de comienzos del siglo XVI. Su uso en algunos editores de texto muy conocidos en la actualidad ha dado al texto lorem ipsum nueva popularidad.Aunque no posee actualmente fuentes para justificar sus hipótesis, el profesor de filología clásica Richard McClintock asegura que su uso se remonta a los impresores de comienzos del siglo XVI. Su uso en algunos editores de texto muy conocidos en la actualidad ha dado al texto lorem ipsum nueva popularidad.Aunque no posee actualmente fuentes para justificar sus hipótesis, el profesor de filología clásica Richard McClintock asegura que su uso se remonta a los impresores de comienzos del siglo XVI. Su uso en algunos editores de texto muy conocidos en la actualidad ha dado al texto lorem ipsum nueva popularidad.Aunque no posee actualmente fuentes para justificar sus hipótesis, el profesor de filología clásica Richard McClintock asegura que su uso se remonta a los impresores de comienzos del siglo XVI. Su uso en algunos editores de texto muy conocidos en la actualidad ha dado al texto lorem ipsum nueva popularidad.Aunque no posee actualmente fuentes para justificar sus hipótesis, el profesor de filología clásica Richard McClintock asegura que su uso se remonta a los impresores de comienzos del siglo XVI. Su uso en algunos editores de texto muy conocidos en la actualidad ha dado al texto lorem ipsum nueva popularidad.Aunque no posee actualmente fuentes para justificar sus hipótesis, el profesor de filología clásica Richard McClintock asegura que su uso se remonta a los impresores de comienzos del siglo XVI. Su uso en algunos editores de texto muy conocidos en la actualidad ha dado al texto lorem ipsum nueva popularidad.Aunque no posee actualmente fuentes para justificar sus hipótesis, el profesor de filología clásica Richard McClintock asegura que su uso se remonta a los impresores de comienzos del siglo XVI. Su uso en algunos editores de texto muy conocidos en la actualidad ha dado al texto lorem ipsum nueva popularidad.Aunque no posee actualmente fuentes para justificar sus hipótesis, el profesor de filología clásica Richard McClintock asegura que su uso se remonta a los impresores de comienzos del siglo XVI. Su uso en algunos editores de texto muy conocidos en la actualidad ha dado al texto lorem ipsum nueva popularidad.", "author"=>"José", "image"=>"https://ihdemu.com/images/blog/que-es-lorem-ipsum.jpg"}, "commit"=>"Guardar post"}
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/posts_controller.rb:14:in `create'
+  [1m[36mPosts Create (3.1ms)[0m  [1m[32mINSERT INTO "posts" ("title", "body", "author", "text", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "Lorem"], ["body", "Aunque no posee actualmente fuentes para justificar sus hipótesis, el profesor de filología clásica Richard McClintock asegura que su uso se remonta a los impresores de comienzos del siglo XVI. Su uso en algunos editores de texto muy conocidos en la actualidad ha dado al texto lorem ipsum nueva popularidad."], ["author", "José"], ["text", "Aunque no posee actualmente fuentes para justificar sus hipótesis, el profesor de filología clásica Richard McClintock asegura que su uso se remonta a los impresores de comienzos del siglo XVI. Su uso en algunos editores de texto muy conocidos en la actualidad ha dado al texto lorem ipsum nueva popularidad.vAunque no posee actualmente fuentes para justificar sus hipótesis, el profesor de filología clásica Richard McClintock asegura que su uso se remonta a los impresores de comienzos del siglo XVI. Su uso en algunos editores de texto muy conocidos en la actualidad ha dado al texto lorem ipsum nueva popularidad.Aunque no posee actualmente fuentes para justificar sus hipótesis, el profesor de filología clásica Richard McClintock asegura que su uso se remonta a los impresores de comienzos del siglo XVI. Su uso en algunos editores de texto muy conocidos en la actualidad ha dado al texto lorem ipsum nueva popularidad.Aunque no posee actualmente fuentes para justificar sus hipótesis, el profesor de filología clásica Richard McClintock asegura que su uso se remonta a los impresores de comienzos del siglo XVI. Su uso en algunos editores de texto muy conocidos en la actualidad ha dado al texto lorem ipsum nueva popularidad.Aunque no posee actualmente fuentes para justificar sus hipótesis, el profesor de filología clásica Richard McClintock asegura que su uso se remonta a los impresores de comienzos del siglo XVI. Su uso en algunos editores de texto muy conocidos en la actualidad ha dado al texto lorem ipsum nueva popularidad.Aunque no posee actualmente fuentes para justificar sus hipótesis, el profesor de filología clásica Richard McClintock asegura que su uso se remonta a los impresores de comienzos del siglo XVI. Su uso en algunos editores de texto muy conocidos en la actualidad ha dado al texto lorem ipsum nueva popularidad.Aunque no posee actualmente fuentes para justificar sus hipótesis, el profesor de filología clásica Richard McClintock asegura que su uso se remonta a los impresores de comienzos del siglo XVI. Su uso en algunos editores de texto muy conocidos en la actualidad ha dado al texto lorem ipsum nueva popularidad.Aunque no posee actualmente fuentes para justificar sus hipótesis, el profesor de filología clásica Richard McClintock asegura que su uso se remonta a los impresores de comienzos del siglo XVI. Su uso en algunos editores de texto muy conocidos en la actualidad ha dado al texto lorem ipsum nueva popularidad.Aunque no posee actualmente fuentes para justificar sus hipótesis, el profesor de filología clásica Richard McClintock asegura que su uso se remonta a los impresores de comienzos del siglo XVI. Su uso en algunos editores de texto muy conocidos en la actualidad ha dado al texto lorem ipsum nueva popularidad.Aunque no posee actualmente fuentes para justificar sus hipótesis, el profesor de filología clásica Richard McClintock asegura que su uso se remonta a los impresores de comienzos del siglo XVI. Su uso en algunos editores de texto muy conocidos en la actualidad ha dado al texto lorem ipsum nueva popularidad."], ["image", "https://ihdemu.com/images/blog/que-es-lorem-ipsum.jpg"], ["created_at", "2023-01-31 13:14:04.109913"], ["updated_at", "2023-01-31 13:14:04.109913"]]
+  ↳ app/controllers/posts_controller.rb:14:in `create'
+  [1m[36mTRANSACTION (3.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/posts_controller.rb:14:in `create'
+Redirected to http://127.0.0.1:3000/posts
+Completed 302 Found in 20ms (ActiveRecord: 7.3ms | Allocations: 3434)
+
+
+Started GET "/posts" for 127.0.0.1 at 2023-01-31 10:14:04 -0300
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPosts Load (0.7ms)[0m  [1m[34mSELECT "posts".* FROM "posts" ORDER BY created_at DESC[0m
+  ↳ app/views/posts/index.html.erb:3
+  Rendered posts/index.html.erb within layouts/application (Duration: 1.6ms | Allocations: 848)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.1ms | Allocations: 40)
+  Rendered layout layouts/application.html.erb (Duration: 16.9ms | Allocations: 4766)
+Completed 200 OK in 18ms (Views: 16.5ms | ActiveRecord: 0.7ms | Allocations: 5361)
+
+
+Started GET "/posts/20" for 127.0.0.1 at 2023-01-31 10:14:18 -0300
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"20"}
+  [1m[36mPosts Load (0.7ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:25:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (Duration: 1.5ms | Allocations: 718)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.1ms | Allocations: 40)
+  Rendered layout layouts/application.html.erb (Duration: 8.7ms | Allocations: 4563)
+Completed 200 OK in 43ms (Views: 9.0ms | ActiveRecord: 1.2ms | Allocations: 9882)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2023-01-31 10:14:27 -0300
+Processing by PostsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/new.html.erb within layouts/application
+  Rendered shared/_alert.html.erb (Duration: 0.2ms | Allocations: 53)
+  Rendered posts/_form.html.erb (Duration: 5.4ms | Allocations: 1578)
+  Rendered posts/new.html.erb within layouts/application (Duration: 6.0ms | Allocations: 1787)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.1ms | Allocations: 39)
+  Rendered layout layouts/application.html.erb (Duration: 18.0ms | Allocations: 6382)
+Completed 200 OK in 19ms (Views: 18.4ms | ActiveRecord: 0.0ms | Allocations: 6847)
+
+
+Started GET "/" for 127.0.0.1 at 2023-01-31 10:14:43 -0300
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPosts Load (3.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts" ORDER BY created_at DESC[0m
+  ↳ app/views/posts/index.html.erb:3
+  Rendered posts/index.html.erb within layouts/application (Duration: 5.7ms | Allocations: 905)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.1ms | Allocations: 40)
+  Rendered layout layouts/application.html.erb (Duration: 13.7ms | Allocations: 4823)
+Completed 200 OK in 20ms (Views: 11.1ms | ActiveRecord: 3.1ms | Allocations: 5957)
+
+
+Started GET "/" for 127.0.0.1 at 2023-01-31 10:15:36 -0300
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPosts Load (1.7ms)[0m  [1m[34mSELECT "posts".* FROM "posts" ORDER BY created_at DESC[0m
+  ↳ app/views/posts/index.html.erb:3
+  Rendered posts/index.html.erb within layouts/application (Duration: 12.2ms | Allocations: 6454)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.2ms | Allocations: 123)
+  Rendered layout layouts/application.html.erb (Duration: 20.5ms | Allocations: 13662)
+Completed 200 OK in 27ms (Views: 14.4ms | ActiveRecord: 7.8ms | Allocations: 17955)
+
+
+Started GET "/posts/20" for 127.0.0.1 at 2023-01-31 10:16:10 -0300
+  [1m[35m (2.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"20"}
+  [1m[36mPosts Load (0.8ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:25:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (Duration: 1.6ms | Allocations: 1283)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.3ms | Allocations: 126)
+  Rendered layout layouts/application.html.erb (Duration: 11.3ms | Allocations: 8440)
+Completed 200 OK in 28ms (Views: 12.9ms | ActiveRecord: 6.7ms | Allocations: 18914)
+
+
