@@ -10,9 +10,11 @@
             <hr class="hr" />
             <p class="text-justify"><%= @post.text %></p>
         </div>
-        <%= form_for @post, method: :delete do |f| %>
-        <%= f.submit "Eliminar post", class: "btn btn-danger" %>
-        <% end %>
+        <div class="mx-auto">
+            <%= form_for @post, method: :delete do |f| %>
+            <%= f.submit "Eliminar post", class: "btn btn-danger" %>
+            <% end %>
+        </div>
     </div>
 
 <% end %>

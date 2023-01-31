@@ -20570,3 +20570,628 @@ Processing by PostsController#create as HTML
 Completed 200 OK in 19ms (Views: 17.2ms | ActiveRecord: 0.0ms | Allocations: 12573)
 
 
+Started GET "/posts/new" for 127.0.0.1 at 2023-01-31 00:04:51 -0300
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PostsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (Duration: 17.8ms | Allocations: 23981)
+  Rendered posts/new.html.erb within layouts/application (Duration: 18.5ms | Allocations: 24491)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.4ms | Allocations: 117)
+  Rendered shared/_alert.html.erb (Duration: 0.4ms | Allocations: 210)
+  Rendered layout layouts/application.html.erb (Duration: 27.4ms | Allocations: 32037)
+Completed 200 OK in 45ms (Views: 29.2ms | ActiveRecord: 8.3ms | Allocations: 40965)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2023-01-31 00:04:54 -0300
+Processing by PostsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (Duration: 4.7ms | Allocations: 1514)
+  Rendered posts/new.html.erb within layouts/application (Duration: 5.0ms | Allocations: 1611)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.0ms | Allocations: 39)
+  Rendered shared/_alert.html.erb (Duration: 0.0ms | Allocations: 53)
+  Rendered layout layouts/application.html.erb (Duration: 13.4ms | Allocations: 5632)
+Completed 200 OK in 15ms (Views: 13.9ms | ActiveRecord: 0.0ms | Allocations: 6107)
+
+
+Started POST "/posts/new" for 127.0.0.1 at 2023-01-31 00:04:56 -0300
+Processing by PostsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "posts"=>{"title"=>"xxxx", "body"=>"s", "text"=>"", "author"=>"", "image"=>""}, "commit"=>"Guardar post"}
+  Rendering layout layouts/application.html.erb
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (Duration: 4.8ms | Allocations: 5216)
+  Rendered posts/new.html.erb within layouts/application (Duration: 5.0ms | Allocations: 5369)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.1ms | Allocations: 39)
+  Rendered shared/_alert.html.erb (Duration: 0.1ms | Allocations: 66)
+  Rendered layout layouts/application.html.erb (Duration: 10.6ms | Allocations: 9790)
+Completed 200 OK in 14ms (Views: 11.0ms | ActiveRecord: 0.0ms | Allocations: 11681)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2023-01-31 00:05:02 -0300
+Processing by PostsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (Duration: 4.3ms | Allocations: 1514)
+  Rendered posts/new.html.erb within layouts/application (Duration: 4.9ms | Allocations: 1667)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.1ms | Allocations: 39)
+  Rendered shared/_alert.html.erb (Duration: 0.3ms | Allocations: 76)
+  Rendered layout layouts/application.html.erb (Duration: 14.8ms | Allocations: 6181)
+Completed 200 OK in 17ms (Views: 15.7ms | ActiveRecord: 0.0ms | Allocations: 6773)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2023-01-31 00:08:19 -0300
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PostsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (Duration: 19.6ms | Allocations: 25887)
+  Rendered posts/new.html.erb within layouts/application (Duration: 20.3ms | Allocations: 26399)
+  Rendered layout layouts/application.html.erb (Duration: 20.4ms | Allocations: 26477)
+Completed 500 Internal Server Error in 33ms (ActiveRecord: 3.8ms | Allocations: 35424)
+
+
+  
+ActionView::Template::Error (undefined method `error_message' for #<ActionView::Helpers::FormBuilder:0x000000012407ec28 @nested_child_index={}, @options={:local=>true, :allow_method_names_outside_object=>true, :skip_default_ids=>false}, @template=#<ActionView::Base:0x0000000000a3e8>, @object=#<Posts id: nil, title: nil, body: nil, author: nil, text: nil, image: nil, created_at: nil, updated_at: nil>, @object_name="posts", @default_options={:skip_default_ids=>false, :allow_method_names_outside_object=>true}, @default_html_options={}, @multipart=nil, @index=nil>):
+    36:      <div class="form-group">
+    37:       <%= form.label :"Url de la imagen" %>
+    38:       <%= form.text_field :image, class: "form-control form-control-lg" %>
+    39:       <%= form.error_message :image %>
+    40:     </div>
+    41: 
+    42:     <div class="text-center" style="margin-top:10px">
+  
+app/views/posts/_form.html.erb:39
+app/views/posts/_form.html.erb:2
+app/views/posts/new.html.erb:2
+Started GET "/posts/new" for 127.0.0.1 at 2023-01-31 00:09:41 -0300
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PostsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (Duration: 17.5ms | Allocations: 24152)
+  Rendered posts/new.html.erb within layouts/application (Duration: 18.1ms | Allocations: 24662)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.3ms | Allocations: 117)
+  Rendered shared/_alert.html.erb (Duration: 0.3ms | Allocations: 184)
+  Rendered layout layouts/application.html.erb (Duration: 26.1ms | Allocations: 32182)
+Completed 200 OK in 38ms (Views: 27.9ms | ActiveRecord: 3.2ms | Allocations: 41136)
+
+
+Started POST "/posts/new" for 127.0.0.1 at 2023-01-31 00:09:46 -0300
+Processing by PostsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "posts"=>{"title"=>"sa", "body"=>"a", "text"=>"a", "author"=>"", "image"=>""}, "commit"=>"Guardar post"}
+  Rendering layout layouts/application.html.erb
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (Duration: 11.8ms | Allocations: 5772)
+  Rendered posts/new.html.erb within layouts/application (Duration: 12.3ms | Allocations: 5925)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.1ms | Allocations: 39)
+  Rendered shared/_alert.html.erb (Duration: 0.1ms | Allocations: 66)
+  Rendered layout layouts/application.html.erb (Duration: 20.3ms | Allocations: 10351)
+Completed 200 OK in 29ms (Views: 21.1ms | ActiveRecord: 0.0ms | Allocations: 12244)
+
+
+Started POST "/posts/new" for 127.0.0.1 at 2023-01-31 00:10:00 -0300
+Processing by PostsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "posts"=>{"title"=>"saaaa", "body"=>"a", "text"=>"a", "author"=>"a", "image"=>"sadsa"}, "commit"=>"Guardar post"}
+  Rendering layout layouts/application.html.erb
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (Duration: 6.4ms | Allocations: 3649)
+  Rendered posts/new.html.erb within layouts/application (Duration: 6.9ms | Allocations: 3902)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.1ms | Allocations: 39)
+  Rendered shared/_alert.html.erb (Duration: 0.1ms | Allocations: 66)
+  Rendered layout layouts/application.html.erb (Duration: 12.2ms | Allocations: 9077)
+Completed 200 OK in 19ms (Views: 13.4ms | ActiveRecord: 0.0ms | Allocations: 10907)
+
+
+Started POST "/posts/new" for 127.0.0.1 at 2023-01-31 00:10:06 -0300
+Processing by PostsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "posts"=>{"title"=>"saaaa", "body"=>"a", "text"=>"a", "author"=>"a", "image"=>"sadsa.cl"}, "commit"=>"Guardar post"}
+  Rendering layout layouts/application.html.erb
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (Duration: 14.4ms | Allocations: 3580)
+  Rendered posts/new.html.erb within layouts/application (Duration: 14.6ms | Allocations: 3834)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.1ms | Allocations: 39)
+  Rendered shared/_alert.html.erb (Duration: 0.1ms | Allocations: 65)
+  Rendered layout layouts/application.html.erb (Duration: 20.4ms | Allocations: 9012)
+Completed 200 OK in 30ms (Views: 21.1ms | ActiveRecord: 0.0ms | Allocations: 10882)
+
+
+Started POST "/posts/new" for 127.0.0.1 at 2023-01-31 00:10:10 -0300
+Processing by PostsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "posts"=>{"title"=>"saaaa", "body"=>"a", "text"=>"a", "author"=>"a", "image"=>"sadsa.cl"}, "commit"=>"Guardar post"}
+  Rendering layout layouts/application.html.erb
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (Duration: 8.0ms | Allocations: 3580)
+  Rendered posts/new.html.erb within layouts/application (Duration: 8.4ms | Allocations: 3833)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.1ms | Allocations: 39)
+  Rendered shared/_alert.html.erb (Duration: 0.1ms | Allocations: 65)
+  Rendered layout layouts/application.html.erb (Duration: 22.5ms | Allocations: 9005)
+Completed 200 OK in 29ms (Views: 23.2ms | ActiveRecord: 0.0ms | Allocations: 10860)
+
+
+Started POST "/posts/new" for 127.0.0.1 at 2023-01-31 00:10:38 -0300
+Processing by PostsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "posts"=>{"title"=>"saaaa", "body"=>"a", "text"=>"a", "author"=>"a", "image"=>"https://www.youtube.com/watch?v=wbZ6yrVxScM&t=924s&ab_channel=freeCodeCamp.org"}, "commit"=>"Guardar post"}
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/posts_controller.rb:14:in `create'
+  [1m[36mPosts Create (2.8ms)[0m  [1m[32mINSERT INTO "posts" ("title", "body", "author", "text", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "saaaa"], ["body", "a"], ["author", "a"], ["text", "a"], ["image", "https://www.youtube.com/watch?v=wbZ6yrVxScM&t=924s&ab_channel=freeCodeCamp.org"], ["created_at", "2023-01-31 03:10:38.881072"], ["updated_at", "2023-01-31 03:10:38.881072"]]
+  ↳ app/controllers/posts_controller.rb:14:in `create'
+  [1m[36mTRANSACTION (1.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/posts_controller.rb:14:in `create'
+Redirected to http://127.0.0.1:3000/posts
+Completed 302 Found in 17ms (ActiveRecord: 5.6ms | Allocations: 4567)
+
+
+Started GET "/posts" for 127.0.0.1 at 2023-01-31 00:10:38 -0300
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPosts Load (2.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts" ORDER BY created_at DESC[0m
+  ↳ app/views/posts/index.html.erb:3
+  Rendered posts/index.html.erb within layouts/application (Duration: 7.4ms | Allocations: 1649)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.1ms | Allocations: 40)
+  Rendered shared/_alert.html.erb (Duration: 0.1ms | Allocations: 76)
+  Rendered layout layouts/application.html.erb (Duration: 18.7ms | Allocations: 6932)
+Completed 200 OK in 22ms (Views: 17.0ms | ActiveRecord: 2.2ms | Allocations: 8017)
+
+
+Started GET "/ffffsdsd" for 127.0.0.1 at 2023-01-31 00:10:38 -0300
+Processing by ExceptionController#catch_404 as HTML
+  Parameters: {"unmatched_route"=>"ffffsdsd"}
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms | Allocations: 441)
+
+
+Started GET "/" for 127.0.0.1 at 2023-01-31 00:10:39 -0300
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPosts Load (0.7ms)[0m  [1m[34mSELECT "posts".* FROM "posts" ORDER BY created_at DESC[0m
+  ↳ app/views/posts/index.html.erb:3
+  Rendered posts/index.html.erb within layouts/application (Duration: 1.7ms | Allocations: 1183)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.0ms | Allocations: 40)
+  Rendered shared/_alert.html.erb (Duration: 0.0ms | Allocations: 52)
+  Rendered layout layouts/application.html.erb (Duration: 5.5ms | Allocations: 6435)
+Completed 200 OK in 7ms (Views: 5.1ms | ActiveRecord: 0.7ms | Allocations: 7341)
+
+
+Started GET "/posts/18" for 127.0.0.1 at 2023-01-31 00:10:40 -0300
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"18"}
+  [1m[36mPosts Load (0.9ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:25:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (Duration: 2.2ms | Allocations: 706)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.1ms | Allocations: 40)
+  Rendered shared/_alert.html.erb (Duration: 0.0ms | Allocations: 52)
+  Rendered layout layouts/application.html.erb (Duration: 7.3ms | Allocations: 5950)
+Completed 200 OK in 18ms (Views: 7.9ms | ActiveRecord: 1.9ms | Allocations: 9305)
+
+
+Started GET "/posts/ffffsdsd" for 127.0.0.1 at 2023-01-31 00:10:40 -0300
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"ffffsdsd"}
+  [1m[36mPosts Load (0.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:25:in `show'
+Completed 404 Not Found in 2ms (ActiveRecord: 0.5ms | Allocations: 1584)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Posts with 'id'=ffffsdsd):
+  
+app/controllers/posts_controller.rb:25:in `show'
+Started GET "/ffffsdsd" for 127.0.0.1 at 2023-01-31 00:10:44 -0300
+Processing by ExceptionController#catch_404 as HTML
+  Parameters: {"unmatched_route"=>"ffffsdsd"}
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 421)
+
+
+Started GET "/" for 127.0.0.1 at 2023-01-31 00:10:44 -0300
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPosts Load (1.7ms)[0m  [1m[34mSELECT "posts".* FROM "posts" ORDER BY created_at DESC[0m
+  ↳ app/views/posts/index.html.erb:3
+  Rendered posts/index.html.erb within layouts/application (Duration: 3.6ms | Allocations: 1181)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.1ms | Allocations: 40)
+  Rendered shared/_alert.html.erb (Duration: 0.0ms | Allocations: 52)
+  Rendered layout layouts/application.html.erb (Duration: 8.4ms | Allocations: 6439)
+Completed 200 OK in 11ms (Views: 7.3ms | ActiveRecord: 1.7ms | Allocations: 7346)
+
+
+Started GET "/posts" for 127.0.0.1 at 2023-01-31 00:16:53 -0300
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPosts Load (0.9ms)[0m  [1m[34mSELECT "posts".* FROM "posts" ORDER BY created_at DESC[0m
+  ↳ app/views/posts/index.html.erb:3
+  Rendered posts/index.html.erb within layouts/application (Duration: 11.3ms | Allocations: 6521)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.5ms | Allocations: 123)
+  Rendered layout layouts/application.html.erb (Duration: 19.4ms | Allocations: 13729)
+Completed 200 OK in 26ms (Views: 14.4ms | ActiveRecord: 6.9ms | Allocations: 18021)
+
+
+Started GET "/ffffsdsd" for 127.0.0.1 at 2023-01-31 00:16:53 -0300
+Processing by ExceptionController#catch_404 as HTML
+  Parameters: {"unmatched_route"=>"ffffsdsd"}
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms | Allocations: 317)
+
+
+Started GET "/" for 127.0.0.1 at 2023-01-31 00:16:53 -0300
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPosts Load (0.7ms)[0m  [1m[34mSELECT "posts".* FROM "posts" ORDER BY created_at DESC[0m
+  ↳ app/views/posts/index.html.erb:3
+  Rendered posts/index.html.erb within layouts/application (Duration: 1.6ms | Allocations: 1307)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.1ms | Allocations: 40)
+  Rendered layout layouts/application.html.erb (Duration: 6.2ms | Allocations: 5873)
+Completed 200 OK in 8ms (Views: 5.9ms | ActiveRecord: 0.7ms | Allocations: 6705)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2023-01-31 00:16:55 -0300
+Processing by PostsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/new.html.erb within layouts/application
+  Rendered shared/_alert.html.erb (Duration: 0.6ms | Allocations: 184)
+  Rendered posts/_form.html.erb (Duration: 29.2ms | Allocations: 23973)
+  Rendered posts/new.html.erb within layouts/application (Duration: 38.5ms | Allocations: 25315)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.1ms | Allocations: 39)
+  Rendered layout layouts/application.html.erb (Duration: 43.1ms | Allocations: 29222)
+Completed 200 OK in 46ms (Views: 43.7ms | ActiveRecord: 0.0ms | Allocations: 29887)
+
+
+Started GET "/posts/ffffsdsd" for 127.0.0.1 at 2023-01-31 00:16:55 -0300
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"ffffsdsd"}
+  [1m[36mPosts Load (0.9ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:25:in `show'
+Completed 404 Not Found in 6ms (ActiveRecord: 1.4ms | Allocations: 5086)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Posts with 'id'=ffffsdsd):
+  
+app/controllers/posts_controller.rb:25:in `show'
+Started POST "/posts/new" for 127.0.0.1 at 2023-01-31 00:16:58 -0300
+Processing by PostsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "posts"=>{"title"=>"ds", "body"=>"", "text"=>"", "author"=>"", "image"=>""}, "commit"=>"Guardar post"}
+  Rendering layout layouts/application.html.erb
+  Rendering posts/new.html.erb within layouts/application
+  Rendered shared/_alert.html.erb (Duration: 0.1ms | Allocations: 68)
+  Rendered posts/_form.html.erb (Duration: 15.1ms | Allocations: 9741)
+  Rendered posts/new.html.erb within layouts/application (Duration: 15.6ms | Allocations: 10078)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.0ms | Allocations: 39)
+  Rendered layout layouts/application.html.erb (Duration: 19.6ms | Allocations: 14325)
+Completed 200 OK in 24ms (Views: 20.2ms | ActiveRecord: 0.0ms | Allocations: 16218)
+
+
+Started POST "/posts/new" for 127.0.0.1 at 2023-01-31 00:17:10 -0300
+Processing by PostsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "posts"=>{"title"=>"ds", "body"=>"d", "text"=>"d", "author"=>"d", "image"=>"japodpaos.cl"}, "commit"=>"Guardar post"}
+  Rendering layout layouts/application.html.erb
+  Rendering posts/new.html.erb within layouts/application
+  Rendered shared/_alert.html.erb (Duration: 0.3ms | Allocations: 67)
+  Rendered posts/_form.html.erb (Duration: 11.1ms | Allocations: 6228)
+  Rendered posts/new.html.erb within layouts/application (Duration: 12.1ms | Allocations: 6763)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.1ms | Allocations: 39)
+  Rendered layout layouts/application.html.erb (Duration: 19.2ms | Allocations: 11654)
+Completed 200 OK in 25ms (Views: 20.2ms | ActiveRecord: 0.0ms | Allocations: 13490)
+
+
+Started POST "/posts/new" for 127.0.0.1 at 2023-01-31 00:17:16 -0300
+Processing by PostsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "posts"=>{"title"=>"ds", "body"=>"d", "text"=>"d", "author"=>"d", "image"=>"japodpaos.com"}, "commit"=>"Guardar post"}
+  Rendering layout layouts/application.html.erb
+  Rendering posts/new.html.erb within layouts/application
+  Rendered shared/_alert.html.erb (Duration: 0.2ms | Allocations: 67)
+  Rendered posts/_form.html.erb (Duration: 10.7ms | Allocations: 6159)
+  Rendered posts/new.html.erb within layouts/application (Duration: 11.4ms | Allocations: 6694)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.1ms | Allocations: 39)
+  Rendered layout layouts/application.html.erb (Duration: 17.5ms | Allocations: 11589)
+Completed 200 OK in 22ms (Views: 18.1ms | ActiveRecord: 0.0ms | Allocations: 13465)
+
+
+Started POST "/posts/new" for 127.0.0.1 at 2023-01-31 00:17:21 -0300
+Processing by PostsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "posts"=>{"title"=>"ds", "body"=>"d", "text"=>"d", "author"=>"d", "image"=>"japodpaos.com"}, "commit"=>"Guardar post"}
+  Rendering layout layouts/application.html.erb
+  Rendering posts/new.html.erb within layouts/application
+  Rendered shared/_alert.html.erb (Duration: 0.1ms | Allocations: 67)
+  Rendered posts/_form.html.erb (Duration: 4.5ms | Allocations: 6159)
+  Rendered posts/new.html.erb within layouts/application (Duration: 4.9ms | Allocations: 6694)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.1ms | Allocations: 39)
+  Rendered layout layouts/application.html.erb (Duration: 9.8ms | Allocations: 11583)
+Completed 200 OK in 21ms (Views: 10.2ms | ActiveRecord: 0.0ms | Allocations: 13455)
+
+
+Started POST "/posts/new" for 127.0.0.1 at 2023-01-31 00:17:38 -0300
+Processing by PostsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "posts"=>{"title"=>"ds", "body"=>"d", "text"=>"d", "author"=>"d", "image"=>"japodpaos.comhttps://colorlib.com/wp/bootstrap-form-templates/"}, "commit"=>"Guardar post"}
+  Rendering layout layouts/application.html.erb
+  Rendering posts/new.html.erb within layouts/application
+  Rendered shared/_alert.html.erb (Duration: 0.2ms | Allocations: 67)
+  Rendered posts/_form.html.erb (Duration: 6.3ms | Allocations: 3635)
+  Rendered posts/new.html.erb within layouts/application (Duration: 7.0ms | Allocations: 4171)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.1ms | Allocations: 39)
+  Rendered layout layouts/application.html.erb (Duration: 17.3ms | Allocations: 9063)
+Completed 200 OK in 22ms (Views: 18.0ms | ActiveRecord: 0.0ms | Allocations: 10920)
+
+
+Started POST "/posts/new" for 127.0.0.1 at 2023-01-31 00:17:43 -0300
+Processing by PostsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "posts"=>{"title"=>"ds", "body"=>"d", "text"=>"d", "author"=>"d", "image"=>"japodpaos.comhttps://colorlib.com/wp/bootstrap-form-templates/"}, "commit"=>"Guardar post"}
+  Rendering layout layouts/application.html.erb
+  Rendering posts/new.html.erb within layouts/application
+  Rendered shared/_alert.html.erb (Duration: 0.1ms | Allocations: 67)
+  Rendered posts/_form.html.erb (Duration: 6.4ms | Allocations: 3635)
+  Rendered posts/new.html.erb within layouts/application (Duration: 7.1ms | Allocations: 4170)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.1ms | Allocations: 39)
+  Rendered layout layouts/application.html.erb (Duration: 13.4ms | Allocations: 9063)
+Completed 200 OK in 21ms (Views: 14.0ms | ActiveRecord: 0.0ms | Allocations: 10918)
+
+
+Started POST "/posts/new" for 127.0.0.1 at 2023-01-31 00:17:50 -0300
+Processing by PostsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "posts"=>{"title"=>"dsdsfsdf", "body"=>"d", "text"=>"d", "author"=>"d", "image"=>"japodpaos.comhttps://colorlib.com/wp/bootstrap-form-templates/"}, "commit"=>"Guardar post"}
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/posts_controller.rb:14:in `create'
+  [1m[36mPosts Create (1.1ms)[0m  [1m[32mINSERT INTO "posts" ("title", "body", "author", "text", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "dsdsfsdf"], ["body", "d"], ["author", "d"], ["text", "d"], ["image", "japodpaos.comhttps://colorlib.com/wp/bootstrap-form-templates/"], ["created_at", "2023-01-31 03:17:50.718355"], ["updated_at", "2023-01-31 03:17:50.718355"]]
+  ↳ app/controllers/posts_controller.rb:14:in `create'
+  [1m[36mTRANSACTION (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/posts_controller.rb:14:in `create'
+Redirected to http://127.0.0.1:3000/posts
+Completed 302 Found in 8ms (ActiveRecord: 3.2ms | Allocations: 4457)
+
+
+Started GET "/posts" for 127.0.0.1 at 2023-01-31 00:17:50 -0300
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPosts Load (0.6ms)[0m  [1m[34mSELECT "posts".* FROM "posts" ORDER BY created_at DESC[0m
+  ↳ app/views/posts/index.html.erb:3
+  Rendered posts/index.html.erb within layouts/application (Duration: 1.6ms | Allocations: 1253)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.1ms | Allocations: 40)
+  Rendered layout layouts/application.html.erb (Duration: 7.1ms | Allocations: 6240)
+Completed 200 OK in 8ms (Views: 6.8ms | ActiveRecord: 0.6ms | Allocations: 7156)
+
+
+Started GET "/ffffsdsd" for 127.0.0.1 at 2023-01-31 00:17:50 -0300
+Processing by ExceptionController#catch_404 as HTML
+  Parameters: {"unmatched_route"=>"ffffsdsd"}
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 429)
+
+
+Started GET "/" for 127.0.0.1 at 2023-01-31 00:17:50 -0300
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPosts Load (0.7ms)[0m  [1m[34mSELECT "posts".* FROM "posts" ORDER BY created_at DESC[0m
+  ↳ app/views/posts/index.html.erb:3
+  Rendered posts/index.html.erb within layouts/application (Duration: 1.8ms | Allocations: 1951)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.1ms | Allocations: 40)
+  Rendered layout layouts/application.html.erb (Duration: 5.5ms | Allocations: 7065)
+Completed 200 OK in 7ms (Views: 5.1ms | ActiveRecord: 0.7ms | Allocations: 8854)
+
+
+Started GET "/posts/19" for 127.0.0.1 at 2023-01-31 00:17:52 -0300
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"19"}
+  [1m[36mPosts Load (1.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:25:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (Duration: 2.2ms | Allocations: 711)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.1ms | Allocations: 40)
+  Rendered layout layouts/application.html.erb (Duration: 11.7ms | Allocations: 5682)
+Completed 200 OK in 25ms (Views: 12.9ms | ActiveRecord: 1.1ms | Allocations: 8364)
+
+
+Started GET "/posts/ffffsdsd" for 127.0.0.1 at 2023-01-31 00:17:52 -0300
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"ffffsdsd"}
+  [1m[36mPosts Load (1.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:25:in `show'
+Completed 404 Not Found in 4ms (ActiveRecord: 1.3ms | Allocations: 3831)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Posts with 'id'=ffffsdsd):
+  
+app/controllers/posts_controller.rb:25:in `show'
+Started DELETE "/posts/19" for 127.0.0.1 at 2023-01-31 00:17:53 -0300
+Processing by PostsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "commit"=>"Eliminar post", "id"=>"19"}
+  [1m[36mPosts Load (1.0ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:29:in `destroy'
+  [1m[36mTRANSACTION (1.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/posts_controller.rb:30:in `destroy'
+  [1m[36mPosts Destroy (1.8ms)[0m  [1m[31mDELETE FROM "posts" WHERE "posts"."id" = $1[0m  [["id", 19]]
+  ↳ app/controllers/posts_controller.rb:30:in `destroy'
+  [1m[36mTRANSACTION (2.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/posts_controller.rb:30:in `destroy'
+Redirected to http://127.0.0.1:3000/posts
+Completed 302 Found in 14ms (ActiveRecord: 6.2ms | Allocations: 4257)
+
+
+Started GET "/posts" for 127.0.0.1 at 2023-01-31 00:17:53 -0300
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPosts Load (2.9ms)[0m  [1m[34mSELECT "posts".* FROM "posts" ORDER BY created_at DESC[0m
+  ↳ app/views/posts/index.html.erb:3
+  Rendered posts/index.html.erb within layouts/application (Duration: 5.7ms | Allocations: 1183)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.1ms | Allocations: 40)
+  Rendered layout layouts/application.html.erb (Duration: 14.1ms | Allocations: 6169)
+Completed 200 OK in 17ms (Views: 11.9ms | ActiveRecord: 2.9ms | Allocations: 7084)
+
+
+Started GET "/ffffsdsd" for 127.0.0.1 at 2023-01-31 00:17:53 -0300
+Processing by ExceptionController#catch_404 as HTML
+  Parameters: {"unmatched_route"=>"ffffsdsd"}
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 429)
+
+
+Started GET "/" for 127.0.0.1 at 2023-01-31 00:17:53 -0300
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPosts Load (3.7ms)[0m  [1m[34mSELECT "posts".* FROM "posts" ORDER BY created_at DESC[0m
+  ↳ app/views/posts/index.html.erb:3
+  Rendered posts/index.html.erb within layouts/application (Duration: 4.5ms | Allocations: 1189)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.1ms | Allocations: 40)
+  Rendered layout layouts/application.html.erb (Duration: 8.8ms | Allocations: 6170)
+Completed 200 OK in 11ms (Views: 5.6ms | ActiveRecord: 3.7ms | Allocations: 7916)
+
+
+Started GET "/posts/18" for 127.0.0.1 at 2023-01-31 00:17:56 -0300
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"18"}
+  [1m[36mPosts Load (0.7ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:25:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (Duration: 0.7ms | Allocations: 408)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 1.7ms | Allocations: 40)
+  Rendered layout layouts/application.html.erb (Duration: 11.9ms | Allocations: 5379)
+Completed 200 OK in 26ms (Views: 12.5ms | ActiveRecord: 0.7ms | Allocations: 7300)
+
+
+Started GET "/posts/ffffsdsd" for 127.0.0.1 at 2023-01-31 00:17:56 -0300
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"ffffsdsd"}
+  [1m[36mPosts Load (0.9ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:25:in `show'
+Completed 404 Not Found in 3ms (ActiveRecord: 0.9ms | Allocations: 1930)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Posts with 'id'=ffffsdsd):
+  
+app/controllers/posts_controller.rb:25:in `show'
+Started GET "/posts/18" for 127.0.0.1 at 2023-01-31 00:19:14 -0300
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"18"}
+  [1m[36mPosts Load (1.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:25:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (Duration: 1.2ms | Allocations: 408)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.1ms | Allocations: 40)
+  Rendered layout layouts/application.html.erb (Duration: 11.0ms | Allocations: 5383)
+Completed 200 OK in 16ms (Views: 11.8ms | ActiveRecord: 1.1ms | Allocations: 7159)
+
+
+Started GET "/posts/18" for 127.0.0.1 at 2023-01-31 00:19:02 -0300
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"18"}
+  [1m[36mPosts Load (0.8ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:25:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (Duration: 1.0ms | Allocations: 1283)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.3ms | Allocations: 126)
+  Rendered layout layouts/application.html.erb (Duration: 7.1ms | Allocations: 8447)
+Completed 200 OK in 25ms (Views: 8.8ms | ActiveRecord: 7.2ms | Allocations: 18926)
+
+
+Started GET "/posts/18" for 127.0.0.1 at 2023-01-31 00:19:20 -0300
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"18"}
+  [1m[36mPosts Load (0.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:25:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (Duration: 0.9ms | Allocations: 1283)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.2ms | Allocations: 126)
+  Rendered layout layouts/application.html.erb (Duration: 6.9ms | Allocations: 8447)
+Completed 200 OK in 21ms (Views: 8.4ms | ActiveRecord: 4.2ms | Allocations: 18926)
+
+
+Started GET "/posts/18" for 127.0.0.1 at 2023-01-31 00:19:33 -0300
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"18"}
+  [1m[36mPosts Load (0.6ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:25:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (Duration: 1.0ms | Allocations: 1283)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.2ms | Allocations: 126)
+  Rendered layout layouts/application.html.erb (Duration: 6.6ms | Allocations: 8447)
+Completed 200 OK in 21ms (Views: 8.0ms | ActiveRecord: 5.3ms | Allocations: 18926)
+
+
+Started GET "/" for 127.0.0.1 at 2023-01-31 00:19:35 -0300
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPosts Load (2.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts" ORDER BY created_at DESC[0m
+  ↳ app/views/posts/index.html.erb:3
+  Rendered posts/index.html.erb within layouts/application (Duration: 7.6ms | Allocations: 1309)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.1ms | Allocations: 40)
+  Rendered layout layouts/application.html.erb (Duration: 14.1ms | Allocations: 5228)
+Completed 200 OK in 19ms (Views: 12.4ms | ActiveRecord: 2.4ms | Allocations: 6050)
+
+
+Started GET "/ffffsdsd" for 127.0.0.1 at 2023-01-31 00:19:35 -0300
+Processing by ExceptionController#catch_404 as HTML
+  Parameters: {"unmatched_route"=>"ffffsdsd"}
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 369)
+
+
+Started GET "/" for 127.0.0.1 at 2023-01-31 00:19:35 -0300
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPosts Load (1.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts" ORDER BY created_at DESC[0m
+  ↳ app/views/posts/index.html.erb:3
+  Rendered posts/index.html.erb within layouts/application (Duration: 2.0ms | Allocations: 871)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.1ms | Allocations: 40)
+  Rendered layout layouts/application.html.erb (Duration: 6.8ms | Allocations: 4788)
+Completed 200 OK in 8ms (Views: 6.0ms | ActiveRecord: 1.1ms | Allocations: 5390)
+
+

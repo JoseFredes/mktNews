@@ -3,5 +3,5 @@ class Posts < ApplicationRecord
     validates :body, presence: true
     validates :text, presence: true
     validates :author, presence: true
-    validates :image, presence: true
+    validates :image, format: { with: URI.regexp }, if: proc { |post| post.image.present? }
 end

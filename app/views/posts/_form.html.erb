@@ -11,22 +11,34 @@
     <div class="form-group">
       <%= form.label :Bajada %>
       <%= form.text_area :body, class: "form-control form-control-lg"  %>
+      <% if @posts.errors.messages[:body].present? %>
+        <p style="color: red;">No debe estar vacio</p>
+      <% end %>
     </div>
 
     <div class="form-group">
       <%= form.label :Texto %>
       <%= form.text_area :text, class: "form-control form-control-lg"%>
+      <% if @posts.errors.messages[:text].present? %>
+        <p style="color: red;">No debe estar vacio</p>
+      <% end %>
     </div>
     
     <div class="form-group">
       <%= form.label :Autor %>
       <%= form.text_field :author, class: "form-control form-control-lg" %>
+      <% if @posts.errors.messages[:author].present? %>
+        <p style="color: red;">No debe estar vacio</p>
+      <% end %>
     </div>
 
 
      <div class="form-group">
       <%= form.label :"Url de la imagen" %>
       <%= form.text_field :image, class: "form-control form-control-lg" %>
+      <% if @posts.errors.messages[:image].present? && @posts.errors.messages[:image].include?("is invalid") %>
+        <p style="color: red;">La URL de la imagen no es válida</p>
+      <% end %>
     </div>
 
     <div class="text-center" style="margin-top:10px">
