@@ -1,24 +1,37 @@
-# README
+Para levantar el proyecto
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+clona el rpositorio
 
-Things you may want to cover:
+añade tu user y pass al docker compose para la base de datos, por default el nombre será el de dev en la BBDD
 
-* Ruby version
+luego corre
 
-* System dependencies
+```docker-compose build```
+luego ``` docker-compose up ```
 
-* Configuration
+por ultimo 
 
-* Database creation
+```docker-compose run web rails db:migrate ```
 
-* Database initialization
+luego local host :)
 
-* How to run the test suite
 
-* Services (job queues, cache servers, search engines, etc.)
+En caso de que hayan errores, solo corre 
 
-* Deployment instructions
+instala las gemas
 
-* ...
+```bundle install```
+
+crea la BD
+
+```rails db:create```
+
+corre las migraciones
+```rails db:migrate ```
+
+luego corre el servidor
+```rails s```
+
+:)
+
+
